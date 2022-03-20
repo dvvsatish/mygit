@@ -18,11 +18,6 @@
         state: present
 
 
-    - name: i want to install nginx
-      apt:
-       name: nginx
-       state: present
-
     - name: i want to copy file /etc/www/html
       file:
        path: /etc/www/html
