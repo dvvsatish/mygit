@@ -18,7 +18,7 @@
         state: present
 
 
-    - name: i want to copy file /etc/www/html
+    - name: i want to copy file index.html
       file:
        path: /etc/www/html
        state: touch
