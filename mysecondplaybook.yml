@@ -1,0 +1,30 @@
+---
+-  hosts: all
+   become: yes
+   tasks:
+    - name: i want to install wget
+      apt: 
+       name: wget
+       state: present
+
+    - name: i want to start webserver
+      service:
+       name: apache2
+       state: started
+
+    - name: i want to install tree
+      apt:
+        name: tree
+        state: present
+
+
+    - name: i want to install nginx
+      apt:
+       name: nginx
+       state: present
+
+    - name: i want to copy file /etc/www/html
+      file:
+       path: /etc/www/html
+       state: touch
+       
