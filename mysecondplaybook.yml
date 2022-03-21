@@ -7,19 +7,18 @@
        name: wget
        state: present
 
-    - name: i want to start webserver
+    - name: i want to start webserver on ubuntu16 ansible nodes
       service:
        name: apache2
        state: started
+       when: ansible_OS_family == "Debain"
 
-    - name: i want to install tree
+    - name: i want to install tree on RedHat ansible nodes
       apt:
         name: tree
         state: present
+      when: ansible_OS_family == "Debain"
 
 
-    - name: i want to copy file index.html
-      file:
-       path: /etc/www/html
-       state: touch
+   
        
