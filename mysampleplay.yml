@@ -1,5 +1,6 @@
 ---
-  - host: all
+  - host: 172.31.47.91
+    become: yes
     vars:
     - var1:wget
     - var2:tree
