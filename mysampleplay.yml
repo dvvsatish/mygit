@@ -1,0 +1,30 @@
+---
+  - host: all
+    vars:
+    - var1:wget
+    - var2:tree
+    tasks:
+     - name: i want to install weget on ubuntu nodes
+       apt:
+        name: "{{item}}" 
+        state: present
+
+       when: ansible_OS_family == "Debain"
+     - name: i want start wget on RedHat nodes
+       service: "{{item}}" 
+       state: started
+       when: ansible_OS_family == "RedHat"
+     - name: i want to install tree on ubuntu nodes
+       apt:
+        name:  "{{item}}"
+        state: present
+       when: ansible_OS_family == "Debain" 
+     - name: i want start tree on RedHat nodes
+       service: "{{item}}" 
+       state: started
+       when: ansible_OS_family == "RedHat"  
+
+       loop:
+        - "{{var1}}"
+        - "{{var2}}"
+        

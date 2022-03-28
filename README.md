@@ -1,4 +1,0 @@
-# mygit
-# myhub
-# mysatishhub
-# satishhub
