@@ -4,7 +4,7 @@
   - hosts: all
     become: yes
     tasks:
-     - name: i want to install weget on ubuntu nodes
+     - name: i want to install wget on ubuntu nodes
        apt:
         name: wget 
         state: present
