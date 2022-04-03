@@ -11,8 +11,9 @@
 
        when: ansible_OS_family == "Debain"
      - name: i want start wget on RedHat nodes
-       service: wget 
-       state: started
+       service: 
+         name: wget 
+         state: started
        when: ansible_OS_family == "RedHat"
      - name: i want to install tree on ubuntu nodes
        apt:
@@ -20,6 +21,7 @@
         state: present
        when: ansible_OS_family == "Debain" 
      - name: i want start tree on RedHat nodes
-       service: tree 
-       state: started
+       service: 
+         name: tree
+         state: started
        when: ansible_OS_family == "RedHat"  
