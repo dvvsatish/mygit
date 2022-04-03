@@ -14,14 +14,14 @@
        service: 
          name: wget 
          state: started
-       when: ansible_OS_family == "RedHat"
+       when: ansible_os_family == "RedHat"
      - name: i want to install tree on ubuntu nodes
        apt:
         name: tree
         state: present
-       when: ansible_OS_family == "Debain" 
+       when: ansible_os_family == "Debain" 
      - name: i want start tree on RedHat nodes
        service: 
          name: tree
          state: started
-       when: ansible_OS_family == "RedHat"  
+       when: ansible_os_family == "RedHat"  
