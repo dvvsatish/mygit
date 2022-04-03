@@ -9,20 +9,10 @@
         name: wget 
         state: present
         tags: mywget
-     - name: i want to start wget 
-       service:
-         name: wget 
-         state: started
-         tags: my wget
-         ignore_errors: yes
      - name: i want to install tree 
        apt:
         name: tree
         state: present
         tags: my tree 
-     - name: i want start tree 
-       service: 
-         name: tree
-         state: started
-         tags: my tree
+     
        
