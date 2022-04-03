@@ -8,11 +8,11 @@
        apt:
         name: wget 
         state: present
-        tags: mywget
+       
      - name: i want to install tree 
        apt:
         name: tree
         state: present
-        tags: my tree 
+ 
      
        
