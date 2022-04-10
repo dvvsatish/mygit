@@ -10,7 +10,7 @@
        debug: 
          msg: "{{myvar1}}"
 
-     - name: i want to instakk git
+     - name: i want to install git
        apt:
         name: "{{ item }}"
         state: present
