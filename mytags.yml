@@ -1,0 +1,22 @@
+---
+- hosts: mywebservers
+  become: yes
+  tasks:
+  - name: install git
+    apt:
+       name: git
+       state: present
+    tags: mygit
+
+  - name: install tree
+    apt:
+       name: tree
+       stateee: present
+    tags: mytree
+    
+
+  - name: installllll wget
+    apt:
+      name: wget
+      state: present 
+    tags: mywget
